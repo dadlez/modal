@@ -1,0 +1,14 @@
+.btn {
+  border-radius: .4em;
+  border: none;
+}
+
+.btn-showModal {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.btn-submit {
+  padding: 10px;
+}

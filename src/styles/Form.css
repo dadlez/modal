@@ -1,0 +1,6 @@
+@import './Constants.css';
+
+.Container {
+  border: 5px solid var(--colors-border); 
+  background: var(--colors-background-form);
+}

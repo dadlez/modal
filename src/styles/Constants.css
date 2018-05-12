@@ -1,0 +1,6 @@
+:root {
+  --colors-background: rgb(169, 170, 57);
+  --colors-background-wrapper: rgba(216, 144, 176, .5);
+  --colors-background-form: rgb(108, 18, 57);
+  --colors-border: rgba(39, 117, 82);
+}
