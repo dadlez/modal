@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Input.css';
 
 export default class Form extends Component {
   state = {
@@ -13,16 +14,20 @@ export default class Form extends Component {
   }
 
   render() {
+    const { name, type, value, placeholder, autoFocus = null } = this.props;
+
     return (
-      <div>
+      <div className='input-text'>
         <label htmlFor={this.props.name}>{this.props.label}</label>
         <input 
-          name={this.props.name} 
-          id={this.props.name} 
-          type={this.props.type} 
-          value={this.state.value} 
+          name={name} 
+          id={name} 
+          type={type} 
+          value={value} 
           onChange={this.onChange} 
-          placeholder={this.props.placeholder} />
+          placeholder={placeholder} 
+          autoFocus={autoFocus} 
+        />
       </div>
     ) 
   }

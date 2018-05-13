@@ -1,6 +1,24 @@
 @import './Constants.css';
 
-.Container {
-  border: 5px solid var(--colors-border); 
+.container {
+  border-radius: calc(var(--border-radius) * 3);
   background: var(--colors-background-form);
+  padding: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-form label {
+  margin-right: 1em;
+}
+
+.modal-form > div {
+  width: 260px;
+  text-align: end;
+  margin: 5px;
 }

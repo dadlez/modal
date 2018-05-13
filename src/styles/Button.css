@@ -1,5 +1,7 @@
+@import './Constants.css';
+
 .btn {
-  border-radius: .4em;
+  border-radius: var(--border-radius);
   border: none;
 }
 
@@ -10,5 +12,7 @@
 }
 
 .btn-submit {
-  padding: 10px;
+  margin-top: 10px;
+  padding: 10px 40px;
+  background-color: var(--colors-background-button)
 }

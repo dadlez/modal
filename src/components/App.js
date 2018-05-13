@@ -16,12 +16,12 @@ class App extends Component {
   }
 
   updateList = (item) => {
-    console.log(['App updateList'], item)
     this.setState({ list: [...this.state.list, item] })
   }
 
   render() {
-    const isListEmpty = this.state.list.length > 0
+    const isListEmpty = this.state.list.length > 0;
+    
     return (
       <div className="App">
         <Button className='btn-showModal' onClick={this.toggleModal}>pokaż modal</Button>

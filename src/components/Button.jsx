@@ -3,6 +3,15 @@ import '../styles/Button.css';
 
 export default (props) => {
   const className = `btn ${props.className}`
+  const { type = 'button', onClick, children } = props;
 
-  return <button className={className} type={props.type ? props.type : 'button'} onClick={props.onClick}>pokaż modal</button>;
+  return (
+    <button 
+      className={className} 
+      type={type} 
+      onClick={onClick}
+    >
+    {children}
+    </button>
+  );
 }

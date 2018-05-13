@@ -1,0 +1,13 @@
+@import './Constants.css';
+
+.input-text input {
+  width: calc(150px - 1em);
+  padding: .5em;
+  border: none;
+  border-radius: calc(var(--border-radius) / 1.5);
+  background-color: var(--colors-background);
+}
+
+.input-text input:focus {
+  background-color: grey;
+}

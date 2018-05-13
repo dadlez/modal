@@ -9,7 +9,7 @@ export default class Form extends Component {
     value: {
       name: '',
       surname: '',
-      emplyment: []
+      emplyment: ''
     }
   }
 
@@ -27,11 +27,11 @@ export default class Form extends Component {
 
   render() {
     return (
-      <div className='Container' onClick={e => e.stopPropagation()}>
-        <form onSubmit={this.onSubmit}>
-          <Input type='text' label='Imię' placeholder='' name='name' updateForm={this.updateState} />
+      <div className='container' onClick={e => e.stopPropagation()}>
+        <form className='modal-form' onSubmit={this.onSubmit}>
+          <Input type='text' label='Imię' placeholder='' name='name' updateForm={this.updateState} autoFocus />
           <Input type='text' label='Nazwisko' placeholder='' name='surname' updateForm={this.updateState} />
-          <Dropdown label='Forma zatrudnienia' name='employment' />
+          <Dropdown label='Forma zatrudnienia' name='employment' updateForm={this.updateState} />
           <Button className='btn-submit' type='submit'>Zapisz</Button>
         </form>
       </div>

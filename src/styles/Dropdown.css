@@ -1,0 +1,9 @@
+@import './Constants.css';
+
+.dropdown select {
+  width: 150px;
+  padding: .5em;  
+  border: none;
+  border-radius: calc(var(--border-radius) / 1.5);
+  background-color: var(--colors-background);
+}
