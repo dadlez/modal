@@ -20,6 +20,7 @@ export default class extends Component {
   }
 
   render() {
+    console.log('modal this.props, this.state', this.props, this.state)
     return (
       this.state.visible &&
       <Wrapper onClick={this.props.toggleModal}>
