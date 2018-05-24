@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import '../styles/Input.css';
 
-export default class Form extends Component {
+export default class extends Component {
   state = {
     value: ''
   }
 
   onChange = (e) => {
-    const value = e.target.value;
-    
-    this.props.updateForm(this.props.name, value);
-    this.setState({ value });
+    this.setState({ value: e.target.value });
+  }
+  
+  onBlur = (e) => {
+    this.props.updateForm(this.props.name, e.target.value);
   }
 
   render() {
-    const { name, type, value, placeholder, autoFocus = null } = this.props;
+    const { name, type, placeholder, autoFocus = null } = this.props;
 
     return (
       <div className='input-text'>
@@ -23,10 +24,12 @@ export default class Form extends Component {
           name={name} 
           id={name} 
           type={type} 
-          value={value} 
-          onChange={this.onChange} 
+          value={this.state.value} 
+          onChange={this.onChange}
+          onBlur={this.onBlur}
           placeholder={placeholder} 
           autoFocus={autoFocus} 
+          required={this.props.required}
         />
       </div>
     ) 

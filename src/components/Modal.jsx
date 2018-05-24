@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Wrapper from './Wrapper';
-import Form from './Form';
+import Form from '../containers/Form';
 
-export default class Modal extends Component {
+export default class extends Component {
   state = {
     visible: this.props.visible
   }
 
   componentDidMount() {
     document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') {
+      if(e.key === 'Escape' && this.state.visible) {
         this.props.toggleModal();
       }
     });
@@ -23,9 +23,7 @@ export default class Modal extends Component {
     return (
       this.state.visible &&
       <Wrapper onClick={this.props.toggleModal}>
-        <Form 
-          toggleModal={this.props.toggleModal} 
-          updateList={this.props.updateList} />
+        <Form />
       </Wrapper>
     );
   }
