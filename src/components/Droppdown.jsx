@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/Dropdown.css'
 
-export default class Dropdown extends Component {
+export default class extends Component {
   state = {
-    value: ''
+    value: 'Wolny'
+  }
+
+  componentDidMount() {
+    this.props.updateForm(this.props.name, this.state.value)
   }
 
   onSelect = (e) => {
@@ -18,8 +22,8 @@ export default class Dropdown extends Component {
       <div className='dropdown'>
       <label htmlFor={this.props.name}>Zatrudnienie</label>
         <select id={this.props.name} value={this.state.value} onChange={this.onSelect}>
-          <option value='Zatrudniony' selected>Zatrudniony</option>
           <option value='Wolny'>Wolny</option>
+          <option value='Zatrudniony'>Zatrudniony</option>
         </select>
       </div>
     ) 
