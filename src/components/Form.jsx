@@ -26,7 +26,6 @@ export default class extends Component {
   }
 
   render() {
-    console.log('form this.state', this.state)
     return (
       <div className='container' onClick={e => e.stopPropagation()}>
         <form className='modal-form' onSubmit={this.onSubmit}>
